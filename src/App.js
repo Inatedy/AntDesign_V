@@ -8,22 +8,41 @@ import Products from './components/products/Products'
 import Patients from './components/patients/Patients'
 
 class App extends Component {
+
+  constructor(props){
+    super(props)
+    this.state = {
+      actualRoute: null
+    }
+  }
+
+  componentDidMount = () => {
+    let path = window.location.pathname
+    let path_only = path.replace("/", "")
+    console.log(path_only)
+    if(path_only === "") path_only = "home"
+    this.setState({actualRoute: path_only})
+  }
+
   render() {
     const { Header, Content, Footer } = Layout
     const { Item } = Menu
     return (
       <Layout className="layout">
-        <Header>
+        <Header className="header">
+        {this.state.actualRoute ? 
           <Menu
+          className="menu"
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={["home"]}
+          defaultSelectedKeys={[this.state.actualRoute]}
           style={{lineHeight:"64px"}}
           >
             <Item key="home"><NavLink to="/">Inicio</NavLink></Item>
             <Item key="products"><NavLink to="/products">Productos</NavLink></Item>
             <Item key="patients"><NavLink to="/patients">Pacientes</NavLink></Item>
           </Menu>
+          : null }
         </Header>
         <Content className="content">
           <div className="main-container">

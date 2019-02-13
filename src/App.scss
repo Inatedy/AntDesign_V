@@ -5,6 +5,14 @@
     background-color: rgba(0,0,0,0.1);
 }
 
+.header, .menu {
+    background-color: #F2AE72 !important;
+}
+
+.ant-menu-item-selected {
+    background-color: #000 !important; /*Overriding ant design default style*/
+}
+
 .main-container {
     min-height: 80vh;
     width: 90vw;

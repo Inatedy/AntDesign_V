@@ -5,7 +5,7 @@
     background-color: rgba(0,0,0,0.1);
 }
 
-.header, .menu {
+.header, .menu, .footer {
     background-color: #F2AE72 !important;
 }
 
@@ -27,10 +27,21 @@
     justify-content: center;
     align-items: center;
 
-    p {
+}
+
+.text-layout {
         font-size: 4em;
         font-weight: 700;
         font-family: 'Indie Flower', cursive;
+}
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        color: #fff;
+        margin: 0;
+        font-size: 1.5em;
     }
 }

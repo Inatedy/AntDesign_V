@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => (
     <div className="home-container">
-        <p>¡Bienvenidos!</p>
+        <p className="text-layout">¡Bienvenidos!</p>
     </div>
 )
 

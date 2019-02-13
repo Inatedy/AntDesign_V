@@ -53,6 +53,9 @@ class App extends Component {
           </Switch>
           </div>
         </Content>
+        <Footer className="footer">
+          <p className="text-layout">Derechos reservados Actosoft 2019 ©</p>
+        </Footer>
       </Layout>
     );
   }

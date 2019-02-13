@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import { Layout, Menu } from 'antd'
 import 'antd/dist/antd.css'
 import {Switch, Route, NavLink } from 'react-router-dom'
@@ -25,12 +25,14 @@ class App extends Component {
             <Item key="patients"><NavLink to="/patients">Pacientes</NavLink></Item>
           </Menu>
         </Header>
-        <Content>
+        <Content className="content">
+          <div className="main-container">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/products" component={Products} />
             <Route exact path="/patients" component={Patients} />
           </Switch>
+          </div>
         </Content>
       </Layout>
     );

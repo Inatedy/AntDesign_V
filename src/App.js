@@ -19,7 +19,7 @@ class App extends Component {
   componentDidMount = () => {
     let path = window.location.pathname
     let path_only = path.replace("/", "")
-    console.log(path_only)
+    //console.log(path_only)
     if(path_only === "") path_only = "home"
     this.setState({actualRoute: path_only})
   }
